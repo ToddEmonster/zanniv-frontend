@@ -13,12 +13,23 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (true) {
+
+        boolean auth = this.isCurrentUserAuthenticated();
+        // Vérifier que l'utilisateur est authentifié;
+
+
+        // TODO : si l'utilisateur est authentifié
+        if (false) {
             startActivity(new Intent(this, ListActivity.class));
         }
         else {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         }
+    }
+
+    protected boolean isCurrentUserAuthenticated() {
+        
+        return false;
     }
 }
